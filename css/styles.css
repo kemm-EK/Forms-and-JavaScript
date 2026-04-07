@@ -1,0 +1,45 @@
+@font-face {
+  font-family: abel;
+  src: url(../fonts/Abel-Regular.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100svh;
+  font-family: abel;
+}
+header,
+footer {
+  background-color: rgb(18, 18, 103);
+  height: 80px;
+  padding: 1rem;
+
+  nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a {
+    color: rgb(18, 18, 103);
+    text-decoration: none;
+    background-color: blanchedalmond;
+    padding: 0.3rem 1rem;
+    border-radius: 2px;
+  }
+}
+footer::after {
+  content: "Sandbox-øvelser, Keld";
+  color: rgb(255, 241, 222);
+}
