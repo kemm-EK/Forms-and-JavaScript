@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms and JavaScript</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/form.css" />
   </head>
   <body>
     <header>
@@ -17,6 +18,35 @@
 
     <main>
       <h1>Byg en web-formular fra grunden</h1>
+
+      <form>
+        <label for="firstname">
+          <input type="text" id="firstname" />
+          First name
+        </label>
+        <label for="pw">
+          <input type="password" id="pw" />
+          Password
+        </label>
+        <label for="num">
+          <input type="number" id="num" />
+          Age
+        </label>
+        <label for="mail">
+          <input type="email" id="mail" />
+          e-mail
+        </label>
+        <label for="tel">
+          <input type="tel" id="tel" />
+          Telephone
+        </label>
+        <label for="date">
+          <input type="date" id="date" />
+          Date
+        </label>
+
+        <button>Indsend data</button>
+      </form>
     </main>
 
     <footer></footer>
