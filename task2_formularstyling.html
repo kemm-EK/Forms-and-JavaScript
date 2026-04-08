@@ -4,24 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms and JavaScript</title>
+    <link rel="stylesheet" href="css/starter.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/form2.css" />
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="">Link</a></li>
-          <li><a href="">Link</a></li>
-          <li><a href="">Link</a></li>
-          <li><a href="">Link</a></li>
+          <li><a href="index.html">Forsiden</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>Styling af en web-formular</h1>
+      <h1>Tilføj lidt JavaScript til formularen</h1>
+
+      <form>
+        <div class="form-group">
+          <label for="firstname"> First name </label>
+          <input required type="text" id="firstname" name="firstname" />
+          <p class="error-message">Please enter a value</p>
+        </div>
+        <div class="form-group">
+          <label for="pw"> Password </label>
+          <input required type="password" id="pw" name="pw" />
+          <p class="error-message">Please provide a password</p>
+        </div>
+        <div class="form-group">
+          <label for="num"> Age </label>
+          <input type="number" id="num" name="num" min="1" max="120" />
+          <p class="error-message">Are You sure?</p>
+        </div>
+        <div class="form-group">
+          <label for="mail"> e-mail </label>
+          <input required type="email" id="mail" name="mail" />
+          <p class="error-message">Please provide a proper email</p>
+        </div>
+        <div class="form-group">
+          <label for="tel"> Telephone </label>
+          <input type="tel" id="tel" name="tel" />
+        </div>
+        <div class="form-group">
+          <label for="date"> Date </label>
+          <input type="date" id="date" name="date" />
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Pets you've got at home</legend>
+            <label for="dog">
+              <input type="checkbox" id="dog" name="dog" value="dog" />
+              Dog
+            </label>
+            <label for="cat">
+              <input type="checkbox" id="cat" name="cat" value="cat" />
+              Cat
+            </label>
+            <label for="octopus">
+              <input type="checkbox" id="octopus" name="octopus" value="octopus" />
+              Octopus
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Do you like animals</legend>
+
+            <label for="yes">
+              <input type="radio" id="yes" name="likeanimals" />
+              Yes
+            </label>
+
+            <label for="no">
+              <input type="radio" id="no" name="likeanimals" />
+              No
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label for="size-select">Size </label>
+          <select name="size" id="size-select" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comment">Do you have any comments? </label>
+          <textarea name="comment" id="comment" name="comment"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="color">Choose a color </label>
+          <input type="color" id="color" name="color" />
+        </div>
+        <div class="form-group">
+          <label for="slider">
+            Antal zombier spottet
+            <input type="range" id="slider" value="0" min="0" max="100" name="zcount" />
+            <output for="slider" id="slider-value">0</output>
+          </label>
+        </div>
+
+        <button>Indsend data</button>
+      </form>
     </main>
 
     <footer></footer>
+
+    <script>
+      function updateResult() {
+        console.log("updateResult");
+        const newValue = document.querySelector("#slider").valueAsNumber;
+        document.querySelector("#slider-value").value = newValue;
+      }
+
+      document.querySelector("#slider").addEventListener("input", updateResult);
+    </script>
   </body>
 </html>
