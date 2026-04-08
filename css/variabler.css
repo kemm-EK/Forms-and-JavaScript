@@ -1,0 +1,22 @@
+.to-be-revealed {
+  display: none;
+}
+#adr-result {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  background-color: rgb(227, 236, 245);
+  height: max-content;
+  align-self: flex-end;
+}
+button {
+  cursor: pointer;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  background-color: rgb(227, 236, 245);
+}
+#adr {
+  display: flex;
+  gap: 2rem;
+}

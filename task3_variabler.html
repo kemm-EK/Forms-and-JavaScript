@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms and JavaScript</title>
+    <link rel="stylesheet" href="css/starter.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/variabler.css" />
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="">Link</a></li>
-          <li><a href="">Link</a></li>
-          <li><a href="">Link</a></li>
-          <li><a href="">Link</a></li>
+          <li><a href="index.html">Forsiden</a></li>
         </ul>
       </nav>
     </header>
@@ -24,18 +23,28 @@
       <section>
         <article>
           <h3>En variabel er en <abbr title="Also Known As">AKA</abbr></h3>
-          <p>Min <mark>navn</mark> er Keld og dit <mark>navn</mark> måske er Leonora</p>
-          <p>Ordet 'navn' er en variabel, vi ofte bruger. Den indeholder nyt indhold, alt efter hvad vi bruger den til eller hvem vi bruger den om.</p>
+          <p>Mit <mark>navn</mark> er <span id="example1">Keld</span> og dit <mark>navn</mark> er måske <span is="example2">Leonora</span></p>
+          <p>Ordet 'navn' er en variabel, vi ofte bruger. Den indeholder nyt indhold, alt efter hvad vi bruger den til, eller hvem vi bruger den om.</p>
         </article>
         <article>
           <h3>En variable kan indeholde mange ting</h3>
           <p>Hvad er <mark>klokken</mark>?</p>
+          <p class="to-be-revealed">Klokken er <span></span></p>
           <p>Ordet 'klokken' er nu en variabel og kan indeholde et tidspunkt.</p>
         </article>
-        <article>
-          <h3>Variabler kan være simple eller komplekse</h3>
-          <p>Hvad er <mark>adressen</mark> på skolen?</p>
-          <p>Ordet 'adressen' er en variabel og den indeholder både tekst og tal, men viser vejen til der, hvor vi skal hen.</p>
+        <article id="adr">
+          <div>
+            <h3>Variabler kan være simple eller komplekse</h3>
+            <p>Hvad er <mark>adressen</mark> på skolen?</p>
+            <p>Ordet 'adressen' er en variabel og den indeholder både tekst og tal, men viser vejen til der, hvor vi skal hen.</p>
+            <button id="adr-button">Se adressen</button>
+          </div>
+          <div id="adr-result">
+            <div>
+              <p id="street"></p>
+              <p id="postal"></p>
+            </div>
+          </div>
         </article>
         <article>
           <h3>Ligesådan med en variabel i JavaScript</h3>
@@ -54,5 +63,7 @@
     </main>
 
     <footer></footer>
+
+    <script src="js/variabler.js"></script>
   </body>
 </html>
