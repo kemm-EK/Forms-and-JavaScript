@@ -41,7 +41,7 @@ footer {
   }
 }
 footer::after {
-  content: "Sandbox-øvelser, Keld";
+  content: "Sandboxing, Keld";
   color: rgb(255, 241, 222);
 }
 main {
