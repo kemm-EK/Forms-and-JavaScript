@@ -7,10 +7,10 @@ form.addEventListener("invalid", cancelPopup, true);
 // formen submitter
 form.addEventListener("submit", submitForm);
 
-function cancelPopup(event) {
+function cancelPopup(e) {
   console.log("cancelPopup");
   // console.log(event);
-  event.preventDefault();
+  e.preventDefault();
 }
 
 function submitForm(event) {
